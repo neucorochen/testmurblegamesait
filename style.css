@@ -1,3 +1,8 @@
+:root {
+  color-scheme: only light;
+  forced-color-adjust: none;
+}
+
 * {
   box-sizing: border-box;
   user-select: none;
@@ -572,7 +577,6 @@ canvas {
 
 /* --- МОБИЛЬНАЯ ВЕРСИЯ (ВСЁ В ОДИН ЭКРАН БЕЗ ПРОКРУТКИ + ОПТИМИЗАЦИЯ) --- */
 @media (max-width: 720px) {
-  /* Отключаем тяжёлые фоновые анимации на телефонах, чтобы не лагало */
   .cloud, .sun-pulse, .rainbow-arc, .lake-shimmer, .fg-orb {
     animation: none;
   }
@@ -614,7 +618,6 @@ canvas {
     display: none;
   }
 
-  /* Перестраиваем сетку: сверху очки, по центру игра, снизу кнопки и девочка */
   .aero-body {
     flex: 1;
     min-height: 0;
@@ -624,12 +627,10 @@ canvas {
     padding: 6px;
   }
 
-  /* Делаем элементы side-col самостоятельными для перестановки */
   .side-col {
     display: contents;
   }
 
-  /* 1. Очки и рекорд — САМЫЕ ВЕРХНИЕ */
   .card-stats {
     order: 1;
     flex-direction: row;
@@ -653,7 +654,6 @@ canvas {
     font-size: 16px;
   }
 
-  /* 2. Игровое поле — занимает всё оставшееся место по центру */
   .game-card {
     order: 2;
     flex: 1;
@@ -671,7 +671,6 @@ canvas {
     aspect-ratio: 480 / 660;
   }
 
-  /* 3. Компактная полоска прогресса + кнопка смены */
   .card-drop {
     order: 3;
     flex-direction: row;
@@ -679,7 +678,7 @@ canvas {
     padding: 5px 8px;
     gap: 8px;
     border-radius: 10px;
-    padding-right: 76px; /* место справа под девочку */
+    padding-right: 76px;
   }
 
   .card-drop .card-title {
@@ -703,14 +702,13 @@ canvas {
     white-space: nowrap;
   }
 
-  /* 4. Кнопки музыки и перезапуска в одну строку */
   .card-controls {
     order: 4;
     flex-direction: row;
     padding: 5px 8px;
     gap: 6px;
     border-radius: 10px;
-    padding-right: 76px; /* место справа под девочку */
+    padding-right: 76px;
   }
 
   .card-controls .card-title,
@@ -723,7 +721,6 @@ canvas {
     font-size: 12px;
   }
 
-  /* 5. Девочка аккуратно парит в правом нижнем углу без прокрутки */
   .mascot-box {
     position: absolute;
     right: 6px;
